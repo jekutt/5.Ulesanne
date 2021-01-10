@@ -121,7 +121,7 @@ namespace _5.Ulesanne
 
         public int setBodyType(string _bodyType)
         {
-            bodyType = _bodyType;
+            bodyType = _bodyType.ToUpper();
             if (bodyType == "CUSTOM")
             {
                 seatsNumber = 1;
@@ -150,7 +150,7 @@ namespace _5.Ulesanne
             {
                 seatsNumber = 1;
             }
-
+            
             return seatsNumber;
         }
 
@@ -171,11 +171,11 @@ namespace _5.Ulesanne
 
             transmission = _transmission;
 
-            if (transmission == "AUTOMAT")
+            if (transmission.ToUpper() == "AUTOMAT")
             {
                 engineKW = Convert.ToInt32(engineKW * 0.9);
             }
-            if (transmission == "MANUAL")
+            if (transmission.ToUpper() == "MANUAL")
             {
                 engineKW = Convert.ToInt32(engineKW / 0.8);
             }
@@ -202,7 +202,7 @@ namespace _5.Ulesanne
             return millage;
         }
 
-        public List<string> addTurboGenerator()
+        public List<string> addTurboCharge()
         {
             additionalEquipment.Add("Turbo Kit");
             isOnAdditionalEquipment = true;
@@ -210,7 +210,7 @@ namespace _5.Ulesanne
             return additionalEquipment;
         }
 
-        public List<string> addAndroidMultimedia()
+        public List<string> addAntiWheelie()
         {
             additionalEquipment.Add("Anti-wheelie system");
             isOnAdditionalEquipment = true;
@@ -254,7 +254,8 @@ namespace _5.Ulesanne
 
         public void PrintInfo()
         {
-            Console.WriteLine("Your new {0} bike have: {1} HP\nYear is: {2}\nColor is: {3}\nMillage is: {4}\nTransmission is: {5}\nBody type is: {6}\nSeats number is: {7}\nEngine Displacement is: {8} " +
+            setDrivingLicenseCategory(engineKW);
+            Console.WriteLine("Your new {0} bike have: {1} kW\nYear is: {2}\nColor is: {3}\nMillage is: {4} km\nTransmission is: {5}\nBody type is: {6}\nSeats number is: {7}\nEngine Displacement is: {8} " +
                               "CC \nAnd a price special for you: {9}$\n\n", bikeMake, engineKW, year, bikeColor, millage, transmission, bodyType, seatsNumber, engineDisplacement, price);
 
             if (isOnAdditionalEquipment == true)

@@ -24,8 +24,8 @@ namespace _5.Ulesanne
         int setBodyType(string _bodyType);
         int setMillage(int _year);
         string setDrivingLicenseCategory(int _engineKW);
-        List<string> addTurboGenerator();
-        List<string> addAndroidMultimedia();
+        List<string> addTurboCharge();
+        List<string> addAntiWheelie();
         List<string> addAutoClutch();
         public List<string> addABS();
         int GetPrice();
