@@ -117,6 +117,7 @@ namespace _5.Ulesanne
             engineDisplacement = 0;
             drivingLicenseCategory = null;
             price = 0;
+            additionalEquipment.Clear();
         }
 
         public int setBodyType(string _bodyType)
@@ -256,7 +257,7 @@ namespace _5.Ulesanne
         {
             setDrivingLicenseCategory(engineKW);
             Console.WriteLine("Your new {0} bike have: {1} kW\nYear is: {2}\nColor is: {3}\nMillage is: {4} km\nTransmission is: {5}\nBody type is: {6}\nSeats number is: {7}\nEngine Displacement is: {8} " +
-                              "CC \nAnd a price special for you: {9}$\n\n", bikeMake, engineKW, year, bikeColor, millage, transmission, bodyType, seatsNumber, engineDisplacement, price);
+                              "CC \nAnd a price special for you: {9}EUR\n\n", bikeMake, engineKW, year, bikeColor, millage, transmission, bodyType, seatsNumber, engineDisplacement, price);
 
             if (isOnAdditionalEquipment == true)
             {

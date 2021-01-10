@@ -9,7 +9,7 @@ namespace _5.Ulesanne
         private IBike _bike;
 
         public IBike Bike
-        {
+        {          
             set { _bike = value; }
         }
 
