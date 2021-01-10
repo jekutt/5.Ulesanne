@@ -19,6 +19,7 @@ namespace _5.Ulesanne
             Console.WriteLine("\nYou are making Your pesonal " + make + " bike\n");
         }
 
+
         public string bikeMake { get; set; }
         public string bikeColor { get; set; }
         public int engineKW { get; set; }
